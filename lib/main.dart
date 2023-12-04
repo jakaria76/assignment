@@ -680,3 +680,58 @@ class BuyNowPage2 extends StatelessWidget {
     );
   }
 }
+
+class BuyNowPage3 extends StatelessWidget {
+  final String bookName;
+
+  const BuyNowPage3(this.bookName);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Buy Now'),
+        titleSpacing: 20,
+        toolbarHeight: 40,
+        toolbarOpacity: 1,
+        elevation: 5,
+      ),
+      body: SingleChildScrollView(
+        padding: EdgeInsets.all(16),
+
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              bookName,
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+            Image.asset('assets/images/Bela-Furabar-Agey.png'),// Replace with actual book cover image URL
+
+
+            Text('Author: Arif Azad'),
+            Text('Description:A mirror of self-discovery. This book is a helpful book to write one s name in the new chapter of life, in sha Allah, in contrast to the mistakes and mistakes that we have been walking in the path of darkness.'),
+            Text('Price: 400 TK'),
+
+            SizedBox(height: 16),
+            Text(
+              '                                                                                                                    Payment Method',
+              style: TextStyle(
+                color: Colors.pink,
+              ),
+
+            ),
+
+            SizedBox(height: 16),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: Text('Go Back'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
