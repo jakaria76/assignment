@@ -465,7 +465,68 @@ class BuyNowPage1 extends StatelessWidget {
               ),
 
             ),
+            Row(
 
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  height: 90,
+                  width: 90,
+                  child: Image.asset('assets/images/bKash.png'),
+
+                ),
+                Container(
+                  height: 90,
+                  width: 90,
+                  child: Image.asset('assets/images/masterCard.png'),
+
+                ),
+                Container(
+                  height: 90,
+                  width: 90,
+                  child: Image.asset('assets/images/Rocket.png'),
+
+                ),
+                Container(
+                  height: 90,
+                  width: 90,
+                  child: Image.asset('assets/images/Nagad.png'),
+
+                )
+              ],
+
+            ),
+            Row(
+
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  height: 90,
+                  width: 90,
+                  child: Text("   bKash"),
+
+                ),
+                Container(
+                  height: 90,
+                  width: 90,
+                  child: Text(" masterCard"),
+
+                ),
+                Container(
+                  height: 90,
+                  width: 90,
+                  child: Text("     Rocket"),
+
+                ),
+                Container(
+                  height: 90,
+                  width: 90,
+                  child: Text("       Nogod"),
+
+                )
+              ],
+
+            ),
             DropdownButton<String>(
               items: ['bKash', 'Nagad', 'Rocket','masterCard']
                   .map((String value) => DropdownMenuItem<String>(
