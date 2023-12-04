@@ -593,7 +593,37 @@ class BuyNowPage2 extends StatelessWidget {
               ),
 
             ),
+            Row(
 
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  height: 90,
+                  width: 90,
+                  child: Image.asset('assets/images/bKash.png'),
+
+                ),
+                Container(
+                  height: 90,
+                  width: 90,
+                  child: Image.asset('assets/images/masterCard.png'),
+
+                ),
+                Container(
+                  height: 90,
+                  width: 90,
+                  child: Image.asset('assets/images/Rocket.png'),
+
+                ),
+                Container(
+                  height: 90,
+                  width: 90,
+                  child: Image.asset('assets/images/Nagad.png'),
+
+                )
+              ],
+
+            ),
             ElevatedButton(
               onPressed: () {
                 Navigator.pop(context);
