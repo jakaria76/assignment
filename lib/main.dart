@@ -398,7 +398,22 @@ class BuyNowPage extends StatelessWidget {
 
             ),
 
-            SizedBox(height: 16),
+            DropdownButton<String>(
+              items: ['bKash', 'Nagad', 'Rocket','masterCard']
+                  .map((String value) => DropdownMenuItem<String>(
+                value: value,
+                child: Text(value),
+              ))
+                  .toList(),
+              onChanged: (String? value) {
+
+              },
+              hint: Text('Select an option'),
+            ),
+
+
+
+        SizedBox(height: 16),
             ElevatedButton(
               onPressed: () {
                 Navigator.pop(context);
