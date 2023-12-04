@@ -552,3 +552,259 @@ class BuyNowPage1 extends StatelessWidget {
     );
   }
 }
+
+class BuyNowPage2 extends StatelessWidget {
+  final String bookName;
+
+  const BuyNowPage2(this.bookName);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Buy Now'),
+        titleSpacing: 20,
+        toolbarHeight: 40,
+        toolbarOpacity: 1,
+        elevation: 5,
+
+      ),
+      body: SingleChildScrollView(
+        padding: EdgeInsets.all(16),
+
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              bookName,
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+            Image.asset('assets/images/paradoxical-sajid.jpg'),// Replace with actual book cover image URL
+
+
+            Text('Author: Arif-Azad'),
+            Text('Description: The present age is the age of presentation. But a lot depends on how you present a thing, how easily, how fluently, how sweetly. Naturally, humans have a tendency to digest theory very little. They want simplicity.'),
+            Text('Price: 350 TK'),
+            SizedBox(height: 16),
+            Text(
+              '                                                                                                                    Payment Method',
+              style: TextStyle(
+                color: Colors.pink,
+              ),
+
+            ),
+            Row(
+
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  height: 90,
+                  width: 90,
+                  child: Image.asset('assets/images/bKash.png'),
+
+                ),
+                Container(
+                  height: 90,
+                  width: 90,
+                  child: Image.asset('assets/images/masterCard.png'),
+
+                ),
+                Container(
+                  height: 90,
+                  width: 90,
+                  child: Image.asset('assets/images/Rocket.png'),
+
+                ),
+                Container(
+                  height: 90,
+                  width: 90,
+                  child: Image.asset('assets/images/Nagad.png'),
+
+                )
+              ],
+
+            ),
+            Row(
+
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  height: 90,
+                  width: 90,
+                  child: Text("   bKash"),
+
+                ),
+                Container(
+                  height: 90,
+                  width: 90,
+                  child: Text(" masterCard"),
+
+                ),
+                Container(
+                  height: 90,
+                  width: 90,
+                  child: Text("     Rocket"),
+
+                ),
+                Container(
+                  height: 90,
+                  width: 90,
+                  child: Text("       Nogod"),
+
+                )
+              ],
+
+            ),
+            DropdownButton<String>(
+              items: ['bKash', 'Nagad', 'Rocket','masterCard']
+                  .map((String value) => DropdownMenuItem<String>(
+                value: value,
+                child: Text(value),
+              ))
+                  .toList(),
+              onChanged: (String? value) {
+                // Handle dropdown value change
+              },
+              hint: Text('Select an option'),
+            ),
+            SizedBox(height: 16),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: Text('Go Back'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class BuyNowPage3 extends StatelessWidget {
+  final String bookName;
+
+  const BuyNowPage3(this.bookName);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Buy Now'),
+        titleSpacing: 20,
+        toolbarHeight: 40,
+        toolbarOpacity: 1,
+        elevation: 5,
+      ),
+      body: SingleChildScrollView(
+        padding: EdgeInsets.all(16),
+
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              bookName,
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+            Image.asset('assets/images/Bela-Furabar-Agey.png'),// Replace with actual book cover image URL
+
+
+            Text('Author: Arif Azad'),
+            Text('Description:A mirror of self-discovery. This book is a helpful book to write one s name in the new chapter of life, in sha Allah, in contrast to the mistakes and mistakes that we have been walking in the path of darkness.'),
+            Text('Price: 400 TK'),
+
+            SizedBox(height: 16),
+            Text(
+              '                                                                                                                    Payment Method',
+              style: TextStyle(
+                color: Colors.pink,
+              ),
+
+            ),
+            Row(
+
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  height: 90,
+                  width: 90,
+                  child: Image.asset('assets/images/bKash.png'),
+
+                ),
+                Container(
+                  height: 90,
+                  width: 90,
+                  child: Image.asset('assets/images/masterCard.png'),
+
+                ),
+                Container(
+                  height: 90,
+                  width: 90,
+                  child: Image.asset('assets/images/Rocket.png'),
+
+                ),
+                Container(
+                  height: 90,
+                  width: 90,
+                  child: Image.asset('assets/images/Nagad.png'),
+
+                )
+              ],
+
+            ),
+            Row(
+
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  height: 90,
+                  width: 90,
+                  child: Text("   bKash"),
+
+                ),
+                Container(
+                  height: 90,
+                  width: 90,
+                  child: Text(" masterCard"),
+
+                ),
+                Container(
+                  height: 90,
+                  width: 90,
+                  child: Text("     Rocket"),
+
+                ),
+                Container(
+                  height: 90,
+                  width: 90,
+                  child: Text("       Nogod"),
+
+                )
+              ],
+
+            ),
+            DropdownButton<String>(
+              items: ['bKash', 'Nagad', 'Rocket','masterCard']
+                  .map((String value) => DropdownMenuItem<String>(
+                value: value,
+                child: Text(value),
+              ))
+                  .toList(),
+              onChanged: (String? value) {
+                // Handle dropdown value change
+              },
+              hint: Text('Select an option'),
+            ),
+            SizedBox(height: 16),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: Text('Go Back'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
