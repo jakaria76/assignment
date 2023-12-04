@@ -426,4 +426,68 @@ class BuyNowPage extends StatelessWidget {
     );
   }
 }
+class BuyNowPage1 extends StatelessWidget {
+  final String bookName;
 
+  const BuyNowPage1(this.bookName);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Buy Now'),
+        titleSpacing: 20,
+        toolbarHeight: 40,
+        toolbarOpacity: 1,
+        elevation: 5,
+      ),
+      body: SingleChildScrollView(
+        padding: EdgeInsets.all(16),
+
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              bookName,
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+            Image.asset('assets/images/dopamin.jpg'),// Replace with actual book cover image URL
+
+
+            Text('Author: thibaut meurisse'),
+            Text('Description: Do you hesitate to do any work? Do you often feel restless within yourself and unable to focus on any task at hand? Not attracting important goals that can positively change your life?'),
+            Text('Price: 480 TK'),
+            SizedBox(height: 16),
+            Text(
+              '                                                                                                                    Payment Method',
+              style: TextStyle(
+                color: Colors.pink,
+              ),
+
+            ),
+
+            DropdownButton<String>(
+              items: ['bKash', 'Nagad', 'Rocket','masterCard']
+                  .map((String value) => DropdownMenuItem<String>(
+                value: value,
+                child: Text(value),
+              ))
+                  .toList(),
+              onChanged: (String? value) {
+                // Handle dropdown value change
+              },
+              hint: Text('Select an option'),
+            ),
+            SizedBox(height: 16),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: Text('Go Back'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
