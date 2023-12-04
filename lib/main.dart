@@ -552,3 +552,57 @@ class BuyNowPage1 extends StatelessWidget {
     );
   }
 }
+
+class BuyNowPage2 extends StatelessWidget {
+  final String bookName;
+
+  const BuyNowPage2(this.bookName);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Buy Now'),
+        titleSpacing: 20,
+        toolbarHeight: 40,
+        toolbarOpacity: 1,
+        elevation: 5,
+
+      ),
+      body: SingleChildScrollView(
+        padding: EdgeInsets.all(16),
+
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              bookName,
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+            Image.asset('assets/images/paradoxical-sajid.jpg'),// Replace with actual book cover image URL
+
+
+            Text('Author: Arif-Azad'),
+            Text('Description: The present age is the age of presentation. But a lot depends on how you present a thing, how easily, how fluently, how sweetly. Naturally, humans have a tendency to digest theory very little. They want simplicity.'),
+            Text('Price: 350 TK'),
+            SizedBox(height: 16),
+            Text(
+              '                                                                                                                    Payment Method',
+              style: TextStyle(
+                color: Colors.pink,
+              ),
+
+            ),
+
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: Text('Go Back'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
