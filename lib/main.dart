@@ -783,6 +783,18 @@ class BuyNowPage3 extends StatelessWidget {
               ],
 
             ),
+            DropdownButton<String>(
+              items: ['bKash', 'Nagad', 'Rocket','masterCard']
+                  .map((String value) => DropdownMenuItem<String>(
+                value: value,
+                child: Text(value),
+              ))
+                  .toList(),
+              onChanged: (String? value) {
+                // Handle dropdown value change
+              },
+              hint: Text('Select an option'),
+            ),
             SizedBox(height: 16),
             ElevatedButton(
               onPressed: () {
