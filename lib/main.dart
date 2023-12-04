@@ -296,5 +296,57 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+class BuyNowPage extends StatelessWidget {
+  final String bookName;
 
+  const BuyNowPage(this.bookName);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Buy Now'),
+        titleSpacing: 20,
+        toolbarHeight: 40,
+        toolbarOpacity: 1,
+        elevation: 5,
+      ),
+      body: SingleChildScrollView(
+        padding: EdgeInsets.all(16),
+
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              bookName,
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+            Image.asset('assets/images/bongho_bondhu.jpg'),// Replace with actual book cover image URL
+
+
+            Text('Author: Sheikh Mujibur Rahman'),
+            Text('Description:Inspired by his wife, Fazilatunnesa Mujib, Mujib started writing his autobiography in his notebooks during his sojourns in jail as a state prisoner between 1967 and 1969.[2] Later Mujib gave the notebooks to Moni to prepare a typed copy. But after the assassination of Sheikh Mujib and Sheikh Fazlul Haq Moni, the notebooks slid in oblivion and remained so until one of his relatives discovered four notebooks in a drawer of Sheikh Moni in 2004.[3] By then, the notebooks'),
+            Text('Price: 250 TK'),
+            SizedBox(height: 16),
+            Text(
+              '                                                                                                                    Payment Method',
+              style: TextStyle(
+                color: Colors.pink,
+              ),
+
+            ),
+
+            SizedBox(height: 16),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: Text('Go Back'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
 
